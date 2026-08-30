@@ -3,20 +3,82 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Home">
-  <h1>Erika Bussmann</h1>
-  <p class="measure">
-    I study the dynamics that emerge in long-horizon human&ndash;AI relationships &mdash;
-    over-reliance, dependency-fostering interaction patterns, anthropomorphism, and their
-    effects on user wellbeing.
-  </p>
+  <div class="home-text">
+    <img
+      src="/images/home-photo.jpg"
+      alt="Erika Bussmann"
+      width="750"
+      height="937"
+      class="home-photo"
+    />
 
-  <h2>Currently</h2>
-  <ul class="plain measure">
-    <li>
-      <strong>REVEAL</strong>, GDM Responsibility team <span class="muted">(20%)</span>
-    </li>
-    <li>
-      <strong>Gemini App</strong> team <span class="muted">(day job)</span>
-    </li>
-  </ul>
+    <h1>Erika Bussmann</h1>
+
+    <p>
+      Hi! I'm an engineer / researcher at Google DeepMind, working in both research
+      (responsible AI) and product (agentic browsing) settings. I'm currently
+      collaborating on a project to improve evaluation targets for human&ndash;model
+      interaction dynamics, led by the incredible
+      <a href="https://sites.google.com/view/laura-weidinger/home">Laura Weidinger</a>
+      and <a href="https://evgeniiaraz.github.io/">Genie Razumovskaia</a>. I spend the
+      rest of my time designing better evaluations and improving model quality for
+      Gemini Live (audio) in the Chrome browser.
+    </p>
+    <p>
+      My current research focuses on the <strong>science of evaluation in
+      socioaffective domains</strong> &mdash; the emotional and relational dynamics
+      between people and AI systems. I'm especially drawn to studying
+      <strong>human outcomes and interaction alignment</strong> over
+      various scales and time horizons, from a single conversation to the lifetime of a
+      model's deployment. I'm excited about the abundance of new data and
+      <strong>methods to understand human behavior and flourishing</strong> via the
+      explosion of conversational AI. At the same time, I'm concerned about cognitive
+      off-loading, over-reliance, and lack of accountability in increasingly
+      <strong>AI-assisted human decision-making</strong>.
+    </p>
+    <p>
+      I am broadly motivated by questions at the intersection of automation, agency,
+      and power. To this end, I recently co-led an online
+      <a href="https://cftw.ohrg.org/">seminar</a>, <em>Capital</em> for Tech Workers,
+      with the brilliant
+      <a href="https://lachlankermode.com/">Lachlan Kermode</a>, in collaboration with
+      the <a href="https://freecomputinglab.ohrg.org/">Free Computing Lab</a>.
+    </p>
+    <p>
+      In past lives, I optimized things (<a href="https://support.google.com/authorizedbuyers/answer/13965526?hl=en">real-time
+      bidding</a>, <a href="https://patents.google.com/patent/US20250370820A1/en">compute
+      allocation</a>) and did <a href="https://www.nature.com/articles/s41893-018-0168-z">applied
+      math</a> and <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NiSkMpEAAAAJ&citation_for_view=NiSkMpEAAAAJ:u-x6o8ySG0sC">computer
+      vision</a> research. I also read and write speculative fiction. I always
+      appreciate vulnerable conversation around tech and identity &mdash; including
+      what it's like to be a female engineer, or living with a chronic mental health
+      condition. If any of this resonates, I'd love to hear from you.
+    </p>
+  </div>
 </Layout>
+
+<style>
+  .home-photo {
+    float: right;
+    width: 230px;
+    height: auto;
+    margin: 0 0 1rem 2rem;
+    border-radius: 3px;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  }
+
+  .home-text h1 {
+    font-size: 1.5rem;
+    margin: 0 0 1rem;
+  }
+
+  @media (max-width: 560px) {
+    .home-photo {
+      float: none;
+      display: block;
+      width: 170px;
+      margin: 0 0 1.5rem;
+    }
+  }
+</style>

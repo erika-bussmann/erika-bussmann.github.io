@@ -34,5 +34,13 @@ const { title, description = 'Erika Bussmann — research on human-AI interactio
       </main>
       <Footer />
     </div>
+    <script>
+      document.querySelectorAll<HTMLAnchorElement>('a[href^="http"]').forEach((a) => {
+        if (a.hostname !== window.location.hostname) {
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer';
+        }
+      });
+    </script>
   </body>
 </html>
