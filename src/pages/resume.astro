@@ -1,0 +1,185 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const engineering = [
+  {
+    title: 'Research Engineer',
+    org: 'Human–AI Interaction, GDM Responsibility',
+    dates: 'March 2026 – Present',
+    bullets: [
+      'Design and iterate on auto-evals for detecting interaction dynamics in human–model conversations, calibrating against human-labeled data to build golden datasets',
+      'Perform in-depth qualitative review of user–model logs to inform evaluation metrics',
+      'Apply time-series statistical analyses to conversational-geometry features (e.g. TRACE, embedding-trajectory metrics) to model the presence and development of specific interaction dynamics across user–model conversations',
+      'Extend this methodology to additional interaction dynamics relevant to potential harms, with results in preparation for publication',
+    ],
+  },
+  {
+    title: 'Software Engineer',
+    org: 'Gemini Live in Chrome, GDM GeminiApp',
+    dates: 'July 2025 – Present',
+    bullets: [
+      'Lead Gemini Live model release evaluation efforts for the Chrome surface',
+      'Design primary eval sets and metrics for model quality hill-climbing and regression detection',
+      'Lead experiments to identify optimal orchestration of sub-agents (e.g. for tool selection)',
+      'Design a framework to root-cause and address tool call over-triggering via CoTs, reducing over-triggering, compute costs, and latency',
+      'Design, run, and land experiments optimizing browser context truncation strategies',
+      'Design and implement an automated process to enable regular refresh of critical benchmarks from user logs, now a key part of the evaluation and improvement pipeline',
+    ],
+  },
+];
+
+const responsible = [
+  {
+    title: 'Co-Instructor',
+    org: '"Capital" For Tech Workers',
+    dates: 'May 2025 – Present',
+    bullets: [
+      'Co-designed/taught a course to help tech workers critically examine the ethics and political economy of the tech industry, with AI as a central case study',
+      'Co-authored the corresponding textbook in partnership with researchers at the Free Computing Lab',
+    ],
+  },
+  {
+    title: 'AI Principles Advisor',
+    org: 'Google AI Principles Pioneers',
+    dates: 'May 2023 – May 2025',
+    bullets: [
+      'Trained contributor to adversarial testing of new launches, evaluating fairness, safety, and human-rights-related risk vectors against Google’s AI Principles',
+    ],
+  },
+  {
+    title: 'Responsible Computing Instructor',
+    org: 'Deep Learning — Brown University',
+    dates: 'July 2021 – May 2022',
+    bullets: [
+      'Developed curriculum to help future tech workers critically engage with the sociopolitical, economic, and environmental consequences of deep learning-powered products',
+      'Led weekly labs and conceptual/debugging office hours for 200+ students',
+      'Invited to guest lecture on the practice of responsible computing to 250+ students',
+    ],
+  },
+  {
+    title: 'Co-Creator & Instructor',
+    org: 'Technofutures & Dystopias — Brown University',
+    dates: 'July 2020 – Dec. 2020',
+    bullets: [
+      'Designed and led an independent survey study on designing tech futures, exploring automation and the future of work, AGI, and tech workers’ rights',
+    ],
+  },
+];
+
+const additional = [
+  {
+    title: 'Software Engineer',
+    org: 'Auction Optimization, Google Ad Exchange (AdX)',
+    dates: 'July 2024 – Sept. 2025',
+    bullets: [
+      'Designed and launched real-time bidding throttling optimizations, including sizing opportunity headroom via simulation and leading live traffic A/B experiments',
+      'Worked cross-functionally with research engineers, PMs, legal counsel, and bidders',
+    ],
+  },
+  {
+    title: 'Software Engineer',
+    org: 'Efficiency & Obtainability, Google Compute Engine (GCE)',
+    dates: 'July 2022 – Sept. 2024',
+    bullets: [
+      'Designed, executed, and owned the primary data layer for Project Moose; named inventor on Patent GP-307734-00-US, "Cloud Obtainability Optimization & Stockout Experience"',
+      'Independently designed and launched a source of truth for a critical zone-isolation reliability initiative, relied on by major GCP products for risk compliance',
+    ],
+  },
+];
+
+const early = [
+  {
+    title: 'Research Engineer',
+    org: 'UMN CS & Engineering, Medical Computer Vision Lab',
+    dates: '2017 – 2019',
+    bullets: [
+      'Designed and developed melanoma detection classifiers via novel morphological features',
+      'Collaborated with dermatologists and imaging experts to understand problem space',
+      'Contributed original research to the International Skin Imaging Collaboration Benchmarks',
+    ],
+  },
+  {
+    title: 'Applied Math Researcher',
+    org: 'UMN Department of Mathematics',
+    dates: '2016 – 2018',
+    bullets: [
+      'Conducted original research in applied dynamical systems under Ph.D. candidate Kate Meyer (Mathematics) and Prof. Clarence Lehman (Computational Biology)',
+      'Published co-author, "Resilience of socially valued properties of natural systems to repeated disturbance," in Nature (Sustainability) and Natural Resource Modeling',
+    ],
+  },
+];
+---
+
+<Layout title="Resume">
+  <h1>Erika Bussmann</h1>
+  <p class="muted" style="margin-top: -0.5rem;">Engineer / Researcher</p>
+  <p class="muted" style="font-size: 0.9rem;">
+    Mountain View, CA &middot; <a href="mailto:erikabussmann@google.com">erikabussmann@google.com</a>
+  </p>
+
+  <h2>Engineering &amp; Research Experience</h2>
+  {engineering.map((role) => (
+    <div style="margin-bottom: 1.75rem;">
+      <div style="display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+        <strong>{role.title}</strong>
+        <span class="muted" style="font-size: 0.9rem;">{role.dates}</span>
+      </div>
+      <div class="section-marker">{role.org}</div>
+      <ul>
+        {role.bullets.map((b) => <li>{b}</li>)}
+      </ul>
+    </div>
+  ))}
+
+  <h2>Responsible Computing &amp; AI Safety Engagement</h2>
+  {responsible.map((role) => (
+    <div style="margin-bottom: 1.75rem;">
+      <div style="display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+        <strong>{role.title}</strong>
+        <span class="muted" style="font-size: 0.9rem;">{role.dates}</span>
+      </div>
+      <div class="section-marker">{role.org}</div>
+      <ul>
+        {role.bullets.map((b) => <li>{b}</li>)}
+      </ul>
+    </div>
+  ))}
+
+  <h2>Additional Engineering Experience</h2>
+  {additional.map((role) => (
+    <div style="margin-bottom: 1.75rem;">
+      <div style="display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+        <strong>{role.title}</strong>
+        <span class="muted" style="font-size: 0.9rem;">{role.dates}</span>
+      </div>
+      <div class="section-marker">{role.org}</div>
+      <ul>
+        {role.bullets.map((b) => <li>{b}</li>)}
+      </ul>
+    </div>
+  ))}
+
+  <h2>Early Research Experience</h2>
+  {early.map((role) => (
+    <div style="margin-bottom: 1.75rem;">
+      <div style="display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+        <strong>{role.title}</strong>
+        <span class="muted" style="font-size: 0.9rem;">{role.dates}</span>
+      </div>
+      <div class="section-marker">{role.org}</div>
+      <ul>
+        {role.bullets.map((b) => <li>{b}</li>)}
+      </ul>
+    </div>
+  ))}
+
+  <h2>Education</h2>
+  <p><strong>B.S., Computer Science &amp; Applied Mathematics</strong><br/><span class="muted">Brown University, Providence, RI</span></p>
+
+  <h2>Skills &amp; Research Interests</h2>
+  <p>
+    <strong>Languages</strong> &mdash; C++, Python, SQL, MATLAB<br/>
+    <strong>Tools / Libraries</strong> &mdash; TensorFlow, Pandas, NumPy, Scikit-learn<br/>
+    <strong>Research Interests</strong> &mdash; Evaluation Science, Scalable Oversight, Socioaffective AI Safety
+  </p>
+</Layout>

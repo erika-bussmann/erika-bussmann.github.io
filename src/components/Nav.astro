@@ -1,0 +1,22 @@
+---
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/research', label: 'Research' },
+  { href: '/writing', label: 'Writing' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/now', label: 'Now' },
+  { href: '/resume', label: 'Resume' },
+];
+
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+---
+
+<nav class="site-nav">
+  {links.map((link) => {
+    const linkPath = link.href.replace(/\/$/, '') || '/';
+    const isCurrent = linkPath === path;
+    return (
+      <a href={link.href} aria-current={isCurrent ? 'page' : undefined}>{link.label}</a>
+    );
+  })}
+</nav>

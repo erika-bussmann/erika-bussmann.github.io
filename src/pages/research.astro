@@ -1,0 +1,53 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const timeline = [
+  { org: 'Compute Engine', role: 'Efficiency & Obtainability', years: '2022–2024' },
+  { org: 'Ad Exchange', role: 'Auction Optimization', years: '2024–2025' },
+  { org: 'Gemini App', role: 'Gemini Live in Chrome', years: '2025–present' },
+  { org: 'REVEAL', role: 'Human–AI Interaction, GDM Responsibility', years: '2026–present' },
+];
+---
+
+<Layout title="Research" description="Research on dependency, anthropomorphism, and socioaffective harms in human-AI interaction.">
+  <h1>Research</h1>
+
+  <p class="measure">
+    The thread running through my work is a question about what happens over the long
+    horizon of a human&ndash;AI relationship: when does reliance on a model tip into
+    dependency, when does anthropomorphism stop being a harmless shorthand and start
+    shaping wellbeing, and how would we even notice a socioaffective harm forming across
+    thousands of ordinary-looking conversations before it became visible in any single one?
+  </p>
+
+  <h2>REVEAL</h2>
+  <p class="measure">
+    REVEAL (GDM Responsibility) studies interaction dynamics in human&ndash;model
+    conversations &mdash; over-reliance, dependency-fostering patterns, and related
+    socioaffective harms. My work there centers on building the evaluation
+    infrastructure for detecting these dynamics: designing and iterating on auto-evals,
+    calibrating them against human-labeled data and rater agreement to build golden
+    datasets, and pairing that with in-depth qualitative review of user&ndash;model logs
+    to keep the metrics grounded in what's actually happening in conversation.
+  </p>
+
+  <h2>Prior relevant work</h2>
+  <p class="measure">
+    Before and alongside REVEAL, I've worked on the statistical and infrastructural
+    building blocks this kind of evaluation depends on: applying time-series analyses to
+    conversational-geometry features like TRACE signals and embedding-trajectory metrics
+    to model how a given interaction dynamic develops across a conversation, and
+    constructing the golden datasets those models are calibrated against.
+  </p>
+
+  <h2>Where I've been</h2>
+  <ul class="plain measure">
+    {timeline.map((stop) => (
+      <li style="margin-bottom: 0.6rem;">
+        <span class="section-marker">{stop.years}</span>
+        &mdash; <strong>{stop.org}</strong>
+        <span class="muted">, {stop.role}</span>
+      </li>
+    ))}
+  </ul>
+</Layout>
