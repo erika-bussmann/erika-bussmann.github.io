@@ -7,8 +7,8 @@ import Layout from '../layouts/Layout.astro';
     <img
       src="/images/home-photo.jpg"
       alt="Erika Bussmann"
-      width="750"
-      height="937"
+      width="1400"
+      height="1500"
       class="home-photo"
     />
 
@@ -49,12 +49,15 @@ import Layout from '../layouts/Layout.astro';
       bidding</a>, <a href="https://patents.google.com/patent/US20250370820A1/en">compute
       allocation</a>) and did <a href="https://www.nature.com/articles/s41893-018-0168-z">applied
       math</a> and <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NiSkMpEAAAAJ&citation_for_view=NiSkMpEAAAAJ:u-x6o8ySG0sC">computer
-      vision</a> research. I also read and write speculative fiction. I always
-      appreciate vulnerable conversation around tech and identity &mdash; including
-      what it's like to be a female engineer, or living with a chronic mental health
-      condition. If any of this resonates, I'd love to hear from you.
+      vision</a> research. I also like to read and write speculative fiction, lift
+      weights, and drink iced coffee year-round.
     </p>
   </div>
+
+  <blockquote class="home-quote" slot="after-footer">
+    <p>A drunk man will find his way home, but a drunk bird may get lost forever.</p>
+    <cite>&mdash; Shizuo Kakutani</cite>
+  </blockquote>
 </Layout>
 
 <style>
@@ -71,6 +74,23 @@ import Layout from '../layouts/Layout.astro';
   .home-text h1 {
     font-size: 1.5rem;
     margin: 0 0 1rem;
+  }
+
+  .home-quote {
+    margin: 0.75rem 0 0;
+  }
+
+  .home-quote p {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .home-quote cite {
+    font-style: normal;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
   }
 
   @media (max-width: 560px) {

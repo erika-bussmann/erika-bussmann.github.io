@@ -33,6 +33,7 @@ const { title, description = 'Erika Bussmann — research on human-AI interactio
         <slot />
       </main>
       <Footer />
+      <slot name="after-footer" />
     </div>
     <script>
       document.querySelectorAll<HTMLAnchorElement>('a[href^="http"]').forEach((a) => {
