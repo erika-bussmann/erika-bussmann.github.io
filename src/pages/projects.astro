@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const papers = [
+  {
+    title: 'Interaction dynamics and socioaffective harms in human–model conversation',
+    venue: 'REVEAL, GDM Responsibility',
+    year: 'In preparation',
+    note: 'Autorater and golden-dataset methodology for detecting over-reliance and dependency-fostering dynamics, extended across additional harm categories.',
+  },
+  {
+    title: 'Cloud Obtainability Optimization & Stockout Experience',
+    venue: 'US Patent GP-307734-00-US',
+    year: '2024',
+    note: 'Named inventor. Filed from work on the primary data layer for Project Moose, Google Compute Engine.',
+    link: 'https://patents.google.com/patent/US20250370820A1/en',
+  },
+  {
+    title: 'Resilience of socially valued properties of natural systems to repeated disturbance',
+    venue: 'Nature (Sustainability) & Natural Resource Modeling',
+    year: '2018',
+    note: 'Co-author. Applied dynamical systems research with Kate Meyer and Prof. Clarence Lehman, UMN.',
+  },
+  {
+    title: 'International Skin Imaging Collaboration (ISIC) Benchmarks',
+    venue: 'UMN Medical Computer Vision Lab',
+    year: '2017–2019',
+    note: 'Contributed original research on melanoma detection via novel morphological features.',
+  },
+];
+---
+
+<Layout title="Projects" description="Coding projects and experiments/results write-ups.">
+  <ul class="plain measure">
+    {papers.map((p) => (
+      <li style="margin-bottom: 1.75rem;">
+        <div><strong>{p.link ? <a href={p.link}>{p.title}</a> : p.title}</strong></div>
+        <div class="section-marker">{p.venue} &middot; <span class="muted" style="font-family: var(--font-sans); font-style: normal;">{p.year}</span></div>
+        <p style="margin-top: 0.3rem;">{p.note}</p>
+      </li>
+    ))}
+  </ul>
+</Layout>

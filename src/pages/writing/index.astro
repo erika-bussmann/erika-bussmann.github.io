@@ -1,32 +1,27 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
 
-const elsewhere = [
-  {
-    title: 'Novel Hand',
-    period: '2020–2021',
-    url: 'https://novelhand.com/author/erikab/',
-    note: 'Essays on activism, technology, and social impact — hacktivism, effective altruism, corporate accountability, and more.',
-  },
-  {
-    title: '"Keepin\' It Brief"',
-    period: '2019',
-    url: 'https://brownpoliticalreview.org/author/ebussmann/',
-    note: 'Written as Data Director, Brown Political Review — on the White House press briefing as a communication channel.',
-  },
-];
+const posts = (await getCollection('writing', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
 ---
 
 <Layout title="Writing">
   <h1>Writing</h1>
-  <p class="measure muted">Nothing published on this site yet &mdash; in the meantime, a few pieces from elsewhere.</p>
-
-  <ul class="plain measure">
-    {elsewhere.map((p) => (
-      <li style="margin-bottom: 1.75rem;">
-        <div><strong><a href={p.url}>{p.title}</a></strong> <span class="muted" style="font-family: var(--font-sans); font-size: 0.85rem;">{p.period}</span></div>
-        <p style="margin-top: 0.3rem;">{p.note}</p>
-      </li>
-    ))}
-  </ul>
+  {posts.length === 0 ? (
+    <p class="measure muted">Nothing published yet &mdash; sociotechnical essays will land here.</p>
+  ) : (
+    <ul class="plain measure">
+      {posts.map((post) => (
+        <li style="margin-bottom: 1.5rem;">
+          <a href={`/writing/${post.slug}`}><strong>{post.data.title}</strong></a>
+          <div class="muted" style="font-size: 0.9rem;">
+            {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+          </div>
+          <p style="margin-top: 0.3rem;">{post.data.dek}</p>
+        </li>
+      ))}
+    </ul>
+  )}
 </Layout>

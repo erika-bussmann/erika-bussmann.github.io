@@ -1,8 +1,61 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const entries = [
+  {
+    title: '"<em>Capital</em>" For Tech Workers',
+    period: '2025–present',
+    blurb:
+      'A course, co-designed and co-taught, helping tech workers critically examine the ethics and political economy of the tech industry, with AI as a central case study. Paired with a textbook co-authored in partnership with researchers at the <a href="https://freecomputinglab.ohrg.org/">Free Computing Lab</a>. I met <a href="https://lachlankermode.com/">Lachlan Kermode</a> while developing responsible computing curriculum for deep learning students at Brown University, and I largely credit him with setting me on this path.',
+    coLead: null,
+  },
+  {
+    title: 'Google AI Principles Pioneers',
+    period: '2023–2025',
+    blurb:
+      'Trained contributor to adversarial testing of new product launches, evaluating fairness, safety, and human-rights-related risk vectors against Google’s AI Principles.',
+    coLead: null,
+  },
+  {
+    title: 'Deep Learning & Technofutures, Brown University',
+    period: '2020–2022',
+    blurb:
+      'Designed and taught curriculum on the sociopolitical, economic, and environmental consequences of deep learning-powered products (Deep Learning course), and co-created an independent survey study on tech futures, automation, and AGI (Technofutures & Dystopias).',
+    coLead: { name: 'Mariel Rošić', url: 'https://sponge-magnolia-wbzg.squarespace.com/about' },
+    creditLabel: 'Co-designed Technofutures & Dystopias with',
+  },
+  {
+    title: '<a href="https://novelhand.com/author/erikab/">Novel Hand</a>',
+    period: '2020–2021',
+    blurb:
+      'Essays on activism, technology, and social impact &mdash; hacktivism, effective altruism, corporate accountability, and more.',
+    coLead: null,
+  },
+  {
+    title: '<a href="https://brownpoliticalreview.org/author/ebussmann/">Brown Political Review</a>',
+    period: '2019',
+    blurb:
+      'Written as Data Director. Piece: &ldquo;Keepin&rsquo; It Brief,&rdquo; on the White House press briefing as a communication channel.',
+    coLead: null,
+  },
+];
 ---
 
 <Layout title="Responsible Computing">
   <h1>Responsible Computing</h1>
-  <p class="measure muted">Under construction :)</p>
+  <p class="measure muted">Teaching, advising, and organizing work on the ethics and political economy of the tech industry.</p>
+
+  <ul class="plain measure">
+    {entries.map((p) => (
+      <li style="margin-bottom: 2rem;">
+        <h2 style="margin-top: 0;"><span set:html={p.title} /> <span class="muted" style="font-family: var(--font-sans); font-size: 0.85rem;">{p.period}</span></h2>
+        <p set:html={p.blurb} />
+        {p.coLead && (
+          <p class="muted" style="margin-top: -0.6rem; font-size: 0.9rem;">
+            {p.creditLabel || 'Co-led with'} <a href={p.coLead.url}>{p.coLead.name}</a>
+          </p>
+        )}
+      </li>
+    ))}
+  </ul>
 </Layout>
