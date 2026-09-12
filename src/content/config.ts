@@ -7,6 +7,7 @@ const creative = defineCollection({
     date: z.coerce.date(),
     dek: z.string(),
     draft: z.boolean().optional().default(false),
+    wide: z.boolean().optional().default(false),
   }),
 });
 
