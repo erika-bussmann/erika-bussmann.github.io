@@ -1,7 +1,7 @@
 ---
 title: "On the fifth day she rose again"
 date: 2022-05-01
-dek: "Vignette on religion, gender, and purity. Photography shot in Portugal and Providence."
+dek: "Vignette on religion, gender, and purity. Shot in Portugal and Providence."
 wide: true
 noImageIndex: true
 ---
