@@ -8,3 +8,5 @@ wide: true
 <object data="/creative/approximations-to-reality.pdf#toolbar=0&view=FitH" type="application/pdf" class="pdf-embed">
   <p>Your browser can't display the embedded PDF &mdash; <a href="/creative/approximations-to-reality.pdf">download it instead</a>.</p>
 </object>
+
+<p class="muted" style="font-size: 0.9rem; margin-top: 0.75rem;">Made under the mentorship of <a href="https://english.brown.edu/people/ilan-ben-meir">Ilan Ben-Meir</a>, Brown University.</p>
