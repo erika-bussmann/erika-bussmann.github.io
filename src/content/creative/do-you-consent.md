@@ -1,7 +1,7 @@
 ---
-title: "Do You Consent?"
+title: "[untitled]"
 date: 2022-05-01
-dek: "A short film juxtaposing AOC's congressional questioning of tech executives with the sexist interview questions posed to women in media — on technology, power, and consent."
+dek: "A short film exploring technology, femininity, privacy, and power, starring AOC, Mr. Zuckerberg, and Hollywood's fiercest divas."
 wide: true
 ---
 
