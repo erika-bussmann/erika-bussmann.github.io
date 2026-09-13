@@ -124,6 +124,8 @@ ul.plain {
   height: auto;
   display: block;
   border-radius: 4px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
 }
 
 .pdf-embed {
