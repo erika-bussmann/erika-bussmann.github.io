@@ -1,5 +1,5 @@
 ---
-title: "[untitled]"
+title: "algorythmia"
 date: 2022-05-01
 dek: "A short film exploring algorithmic justice, femininity, privacy, and power, starring AOC, Mr. Zuckerberg, and Hollywood's most quick-witted divas."
 wide: true
