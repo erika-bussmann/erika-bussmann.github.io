@@ -1,7 +1,7 @@
 ---
 title: "[untitled]"
 date: 2022-05-01
-dek: "A short film exploring technology, femininity, privacy, and power, starring AOC, Mr. Zuckerberg, and Hollywood's fiercest divas."
+dek: "A short film exploring technology, femininity, privacy, and power, starring AOC, Mr. Zuckerberg, and Hollywood's most quick-witted divas."
 wide: true
 ---
 
