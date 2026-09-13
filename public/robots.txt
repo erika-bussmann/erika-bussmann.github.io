@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /creative/fifth-day-pages/
 
 Sitemap: https://erika-bussmann.github.io/sitemap-index.xml

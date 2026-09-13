@@ -113,6 +113,19 @@ ul.plain {
   font-style: italic;
 }
 
+.lookbook {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.lookbook img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
 .pdf-embed {
   width: 100%;
   aspect-ratio: 8.5 / 11;

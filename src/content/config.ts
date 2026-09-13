@@ -8,6 +8,7 @@ const creative = defineCollection({
     dek: z.string(),
     draft: z.boolean().optional().default(false),
     wide: z.boolean().optional().default(false),
+    noImageIndex: z.boolean().optional().default(false),
   }),
 });
 

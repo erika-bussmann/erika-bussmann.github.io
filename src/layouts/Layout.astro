@@ -6,9 +6,14 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description?: string;
+  noImageIndex?: boolean;
 }
 
-const { title, description = 'Erika Bussmann — research on human-AI interaction dynamics.' } = Astro.props;
+const {
+  title,
+  description = 'Erika Bussmann — research on human-AI interaction dynamics.',
+  noImageIndex = false,
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -18,6 +23,7 @@ const { title, description = 'Erika Bussmann — research on human-AI interactio
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="description" content={description} />
+    {noImageIndex && <meta name="robots" content="noimageindex" />}
     <title>{title} · Erika Bussmann</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

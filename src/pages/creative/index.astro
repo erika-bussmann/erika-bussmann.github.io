@@ -9,6 +9,7 @@ const posts = (await getCollection('creative', ({ data }) => !data.draft)).sort(
 
 <Layout title="Creative">
   <h1>Creative</h1>
+  <p class="measure muted" style="font-size: 0.85rem;">All work is human-generated. Content is intended for creative purposes only.</p>
   {posts.length === 0 ? (
     <p class="measure muted">Nothing published yet &mdash; writing and other creative/multimedia work will land here.</p>
   ) : (
@@ -16,9 +17,6 @@ const posts = (await getCollection('creative', ({ data }) => !data.draft)).sort(
       {posts.map((post) => (
         <li style="margin-bottom: 1.5rem;">
           <a href={`/creative/${post.slug}`}><strong>{post.data.title}</strong></a>
-          <div class="muted" style="font-size: 0.9rem;">
-            {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', timeZone: 'UTC' })}
-          </div>
           <p style="margin-top: 0.3rem;">{post.data.dek}</p>
         </li>
       ))}

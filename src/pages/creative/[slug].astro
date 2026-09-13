@@ -14,7 +14,7 @@ const { post } = Astro.props;
 const { Content } = await post.render();
 ---
 
-<Layout title={post.data.title} description={post.data.dek}>
+<Layout title={post.data.title} description={post.data.dek} noImageIndex={post.data.noImageIndex}>
   <h1>{post.data.title}</h1>
   <div class={post.data.wide ? '' : 'measure'}>
     <Content />
